@@ -1,6 +1,6 @@
 CREATE database gestion_eventos1;
 use gestion_eventos1;
-
+/*NO SE INSERTO NADA EN LA BASE DE DATOS SE PUEDE DIRECTAMENTE DESDE EL POST AGREGAR LA INF*/
 create table Eventos(
 id int primary key ,
 nombre varchar(255), 

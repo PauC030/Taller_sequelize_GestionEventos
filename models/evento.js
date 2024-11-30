@@ -10,35 +10,35 @@ const Sequelize = require('../config/database');
             primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING(255), // Coincide con VARCHAR(255)
+            type: DataTypes.STRING(255), 
             allowNull: false
         },
         descripcion: {
-            type: DataTypes.TEXT // Coincide con TEXT
+            type: DataTypes.TEXT 
         },
         fecha: {
-            type: DataTypes.DATE, // Coincide con DATETIME
+            type: DataTypes.DATE, 
             allowNull: false
         },
         lugar: {
-            type: DataTypes.STRING(255), // Coincide con VARCHAR(255)
+            type: DataTypes.STRING(255), 
             allowNull: false
         },
         capacidadMaxima: {
-            type: DataTypes.INTEGER, // Coincide con INT
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         imagenUrl: {
-            type: DataTypes.STRING(255) // Coincide con VARCHAR(255)
+            type: DataTypes.STRING(255)
         },
         precioEntrada: {
-            type: DataTypes.DECIMAL(10, 2) // Coincide con DECIMAL(10, 2)
+            type: DataTypes.DECIMAL(10, 2) 
         },
         categoria: {
-            type: DataTypes.STRING(100) // Coincide con VARCHAR(100)
+            type: DataTypes.STRING(100) 
         },
         estado: {
-            type: DataTypes.ENUM('activo', 'inactivo'), // Coincide con ENUM
+            type: DataTypes.ENUM('activo', 'inactivo'), 
             defaultValue: 'activo'
         }
     }, {

@@ -8,7 +8,7 @@ class InscripcionService {
 
         const inscripciones = await Inscripcion.count({ where: { eventoId: data.eventoId } });
         if (inscripciones >= evento.capacidadMaxima) {
-            throw new Error('Capacidad máxima alcanzada');
+           
         }
 
         return await Inscripcion.create(data);
@@ -27,7 +27,7 @@ class InscripcionService {
             return await Inscripcion.findAll();
         } catch (error) {
             console.error('Error al obtener inscripciones:', error);
-            throw error; // Lanza el error para manejarlo en el controlador
+            
         }
     }
 }

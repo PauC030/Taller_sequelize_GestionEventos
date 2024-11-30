@@ -10,7 +10,7 @@ class EventoService {
             return await Evento.findAll();
         } catch (error) {
             console.error('Error al obtener eventos:', error);
-            throw error; // Lanza el error para manejarlo en el controlador
+            throw error; 
         }
     }
 
@@ -24,7 +24,7 @@ class EventoService {
             }
         } catch (e) {
             console.error('Error al actualizar el evento:', e);
-            throw e; // Lanza el error para manejarlo en el controlador
+            throw e; 
         }
     }
 
@@ -38,7 +38,7 @@ class EventoService {
             }
         } catch (e) {
             console.error('Error al eliminar el evento:', e);
-            throw e; // Lanza el error para manejarlo en el controlador
+            throw e; 
         }
     }
 }

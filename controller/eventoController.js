@@ -4,9 +4,9 @@ class EventoController {
     static async crearEvento(req, res) {
         try {
             const evento = await EventoService.crearEvento(req.body);
-            res.status(201).json(evento);
+            res.json(evento);
         } catch (e) {
-            res.status(400).json({ error: 'Error al crear el evento' });
+            res.json({ error: 'Error al crear el evento' });
         }
     }
 
@@ -25,7 +25,7 @@ class EventoController {
             const mensaje = await EventoService.actualizarEvento(req.params.id, req.body);
             res.json(mensaje);
         } catch (error) {
-            res.json({ error: error.message });
+            res.json({ error: 'error al actualizar' });
         }
     }
 

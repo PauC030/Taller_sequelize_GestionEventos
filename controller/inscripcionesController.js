@@ -4,9 +4,9 @@ class InscripcionController {
     static async inscribirUsuario(req, res) {
         try {
             const inscripcion = await InscripcionService.inscribirUsuario(req.body);
-            res.status(201).json(inscripcion);
+            res.json(inscripcion);
         } catch (error) {
-            res.status(400).json({ error: error.message });
+            res.json({ error: error.message });
         }
     }
 
@@ -15,7 +15,7 @@ class InscripcionController {
             const mensaje = await InscripcionService.cancelarInscripcion(req.params.id);
             res.json(mensaje);
         } catch (error) {
-            res.status(400).json({ error: error.message });
+            res.json({ error:'error al cancelar la incripcion' });
         }
     }
 
@@ -24,7 +24,7 @@ class InscripcionController {
             const inscripciones = await InscripcionService.obtenerInscripciones();
             res.json(inscripciones);
         } catch (error) {
-            res.status(500).json({ error: error.message });
+            res.json({ error:'error al obtener evento' });
         }
     }
 }
